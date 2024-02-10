@@ -23,13 +23,13 @@ services:
     volumes:
       - backend-svc-pgdb-data:/var/lib/postgresql/data    
 
-  frontend:
-    image: ghcr.io/rum-people/frontend-svc:<commit-hash>
-    restart: unless-stopped
-    volumes:
-      - ./configs/frontend.js:/usr/share/nginx/html/static/env.js
-    ports:
-      - "7000:80"
+  # frontend:
+  #   image: ghcr.io/rum-people/frontend-svc:<commit-hash>
+  #   restart: unless-stopped
+  #   volumes:
+  #     - ./configs/frontend.js:/usr/share/nginx/html/static/env.js
+  #   ports:
+  #     - "7000:80"
 
 
 volumes:
