@@ -1,7 +1,15 @@
 services:
   backend-svc:
-    image: ghcr.io/rum-people/backend-svc:<commit-hash>
+    image: ghcr.io/rum-people/backend-svc:223b9068472b836f7a014b476cd33af571ac1601 
     restart: unless-stopped
+    ports:
+      - 8000:8000
+    environment:
+      - DATABASE_HOST=backend-svc-pgdb
+      - DATABASE_PORT=5432
+      - DATABASE_USER=backend-svc
+      - DATABASE_PASSWORD=backend-svc
+      - DATABASE_NAME=backend-svc
     depends_on:
       backend-svc-pgdb:
         condition: service_healthy
