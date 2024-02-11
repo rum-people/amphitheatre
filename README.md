@@ -14,7 +14,7 @@ docker compose up
 
 And then proceed to 
 ```bash 
-http://localhost:3000
+http://localhost:8080
 ``` 
 to access the project web page.
 
